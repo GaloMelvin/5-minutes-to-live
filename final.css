@@ -1,0 +1,76 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+body.index { background-image: url('/assets/final.png'); }
+
+.inicio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+#menu-central {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    bottom: 200px;
+}
+
+#menu-central img {
+    position: relative;
+    width: auto;
+    height: 250px;
+    margin-top: 80px;
+    font-size: 5em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+    color: white;
+    position: relative;
+    top: 450px;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+    text-align: center;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.boton-menu {
+    background: linear-gradient(145deg, #86a12b, #657a1e);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: table-column;
+    top: 450px;
+}
+
+.boton-menu:hover {
+    transition: 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #374212, #232b0a);
+}

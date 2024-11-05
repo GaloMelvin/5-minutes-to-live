@@ -1,0 +1,18 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    cursor: crosshair;
+  }
+  
+  canvas {
+    display: block;
+    background-image: url(/assets/fondojuego.png);
+    background-size: cover;
+  }
+  
