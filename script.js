@@ -1,4 +1,3 @@
-// Configuración del canvas para ocupar toda la pantalla
 let isGameOver = false;
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -10,7 +9,6 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-// Cargar la imagen del personaje
 const playerImage = new Image();
 playerImage.src = "/assets/pjprincipal.png";
 playerImage.onload = () => {
@@ -23,8 +21,7 @@ enemyImage.src = "/assets/bandido.png";
 const meleeEnemyImage = new Image();
 meleeEnemyImage.src = "/assets/esqueleto.png";
 
-
-// Variables del personaje (llamado objeto)
+// Variables del pj (llamado objeto)
 const player = {
   x: canvas.width / 5,
   y: canvas.height / 5,
@@ -329,10 +326,11 @@ function restartGame() {
   player.y = canvas.height / 2;
   player.isReloading = false;
   isGameOver = false;
+  
+  // Reiniciar el temporizador
+  timerStart = Date.now();
 }
-// Loop de juego
 
-// Variables adicionales para el menú de pausa
 let isPaused = false;
 
 // diseños pausa
@@ -356,7 +354,6 @@ pauseMenu.innerHTML = `
     <button id="resumeButton" style="width: 100%; padding: 10px;margin-bottom:5px; font-size: 16px; border-radius: 5px; background-color: rgba(42, 95, 53, 0.781);; color: white; border: none; cursor: pointer; margin-right: 30px ">Reanudar</button>
     <button id="mainMenuButton" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 5px; background-color: rgba(42, 95, 53, 0.781);; color: white; border: none; cursor: pointer;"><a href="inicio.html" style="text-decoration:none;color:white;">Ir al Menú Principal</a></button>
 `;
-
 
 // Seleccionar botones dentro del menú de pausa
 const resumeButton = document.getElementById("resumeButton");
@@ -385,6 +382,8 @@ const timerDuration = 5 * 60 * 1000; // 5 minutos en milisegundos
 let timerStart = Date.now();
 
 function updateTimer() {
+  if (isGameOver) return; // Detener el temporizador si el juego ha terminado
+
   const timeElapsed = Date.now() - timerStart;
   const timeRemaining = Math.max(0, timerDuration - timeElapsed);
 
@@ -397,7 +396,8 @@ function updateTimer() {
   ctx.textAlign = "right";
   ctx.fillText(`Tiempo: ${minutes}:${seconds < 10 ? "0" : ""}${seconds}`, canvas.width - 10, 30);
 
-  if (timeRemaining <= 0 && !isGameOver) {
+  if (timeRemaining <= 0) {    
+    gameOver === true
     window.location.href = "final.html";
   }
 }
