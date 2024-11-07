@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>5 minutes to live</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 minutes to live</title>
+    <link rel="stylesheet" href="inicio.css">
 </head>
-<body>
-<canvas id="gameCanvas"></canvas>
-<section>
-<audio autoplay loop>
-    <source src="./assets/mp32.mp3"> 
-</audio>
-</section>
-<script src="script.js"></script>
+<body class="index">
+    <div class="inicio-container">
+        <div id="menu-central">
+            <img src="/assets/Logo.png">
+            <div class="botones-container">
+            </div>
+            <div class="desc">
+            <p>En un mundo post-apocaliptico arruinado por criaturas tu eres uno de los pocos sobrevivientes, exploras una ciudad y sin querer activas una alarma queriendo llegar a tu base. Ahora tienes que sobrevivir de criaturas y bandidos hasta que tus compañeros vengan a rescatarte</p>
+            </div>
+            <div>
+            <button id="btnIniciar" class="boton-menu">Jugar</button>
+            <button id="btnPersonajes" class="boton-menu2">Personajes</button>
+            <button id="btnLimite" class="boton-menu3">Sin Límite</button>
+            </div>
+        </div>
+    </div>
+    <audio autoplay loop>
+        <source src="./assets/mp31.mp3"> 
+    </audio>  
+    <i id="btnPantallaCompleta" class="fa-solid fa-expand"><img src="/assets/expandir.png"></i>
+    <script src="inicio.js"></script>
 </body>
 </html>

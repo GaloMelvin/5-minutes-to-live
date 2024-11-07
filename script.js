@@ -352,7 +352,7 @@ document.body.appendChild(pauseMenu);
 pauseMenu.innerHTML = `
     <h2>Pausa</h2>
     <button id="resumeButton" style="width: 100%; padding: 10px;margin-bottom:5px; font-size: 16px; border-radius: 5px; background-color: rgba(42, 95, 53, 0.781);; color: white; border: none; cursor: pointer; margin-right: 30px ">Reanudar</button>
-    <button id="mainMenuButton" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 5px; background-color: rgba(42, 95, 53, 0.781);; color: white; border: none; cursor: pointer;"><a href="inicio.html" style="text-decoration:none;color:white;">Ir al Menú Principal</a></button>
+    <button id="mainMenuButton" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 5px; background-color: rgba(42, 95, 53, 0.781);; color: white; border: none; cursor: pointer;"><a href="index.html" style="text-decoration:none;color:white;">Ir al Menú Principal</a></button>
 `;
 
 // Seleccionar botones dentro del menú de pausa

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnSalir = document.getElementById('btnSalir');
 
     btnIniciar.addEventListener('click', function() {
-        window.location.href = '/index.html';
+        window.location.href = '/juego.html';
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
